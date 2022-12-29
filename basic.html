@@ -1,19 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Jquery</title>
-    <script src="jquery-3.6.3.min.js"></script>
+	<title>Learn Jquery</title>
+	<style>
+		p{ margin: 0; }
+
+		h2{ margin: 0 0 5px; }
+
+		#test1{
+			display: inline-block;
+			background: pink;
+			width: 150px;
+		    height: 100px;
+		    padding: 10px 10px;
+		    margin: 0 50px 0 0;
+		}
+
+		#test2{
+			display: inline-block;
+			background: orange;
+			width: 150px;
+		    height: 100px;
+		    padding: 10px 10px;
+		}
+	</style>
 </head>
 <body>
-    <h1>jquery Basic Syntax</h1>
+	    <h1>jquery Basic Syntax</h1>
 <!-- document is a selector . .ready function is a method-->
-    <script>
-        $(document).ready(function(){
-            
-        });
-    </script>
+<!--  target dom element        what will work-->
+	<div id="test1">
+		<h2>Test Box 1</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	</div>
+
+	<div id="test2">
+		<h2>Test Box 2</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	</div>
+	<!-- jquery cdn -->
+	<script src="jquery-3.6.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			//console.log("Hello") print in console;
+		    var a = $('#test1').html();
+            console.log(a);
+// load html content
+            var b =$('#test2').html();
+            console.log(b);
+		});
+	</script>
 </body>
 </html>
