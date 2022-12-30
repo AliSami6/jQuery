@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Learn Jquery</title>
+	 <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #box{
+            border:1px solid #000;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+	    <h1>jquery Selectors</h1>
+
+	<div id="box" class="test">
+		<h3>Test Box 1</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	</div>
+
+	<div id="test2">
+		<h2>Test Box 2</h2>
+		<p id="ds">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	</div>
+    <ul id="list">
+        <li>Orange</li>
+        <li class="test">Banana</li>
+        <li >Grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+	<!-- jquery cdn -->
+	<script src="jquery-3.6.3.min.js"></script>
+    <!-- document is a selector . .ready function is a method-->
+<!--  target dom element        what will work-->
+	<script>
+        
+		$(document).ready(function(){
+			//console.log("Hello") print in console;
+		    $('#list').css('color','red');
+            $('#list').css('list-style','none');
+		     $('#list').css('display','flex');
+            $('ul li').css('padding','4px');// select using tag like as ul li
+            $('h2,h3,p').css('color','green');// select multiple tag
+            $('.test').css('color','black'); // select by class name
+		});
+	</script>
+</body>
+</html>

@@ -37,18 +37,19 @@
 
 	<div id="test2">
 		<h2>Test Box 2</h2>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		<p id="ds">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 	</div>
 	<!-- jquery cdn -->
 	<script src="jquery-3.6.3.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			//console.log("Hello") print in console;
-		    var a = $('#test1').html();
+		    var a = $('#test1').html(); // load html content
             console.log(a);
-// load html content
+
             var b =$('#test2').html();
             console.log(b);
+		
 		});
 	</script>
 </body>
