@@ -26,6 +26,7 @@
 <script src = "https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
     $(document).ready(function(){
+        /* Jquery keypress event press a or any key */
 			$('#product_name').keypress(function(){
 				$('#product_name').css('background-color','green');
 				
@@ -33,10 +34,10 @@
 
             $('#qty').keyup(function(){
             var a= $('#qty').val();
-            alert(a);
+            alert(a); // print a variable
             });
 
-            $('#qty').keyup(calculate);
+            $('#qty').keyup(calculate); // write value your input form
             $('#price').keyup(calculate); 
             
             function calculate(e){
