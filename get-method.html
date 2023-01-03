@@ -61,7 +61,12 @@
           //  var c = $('#box p').html();
           //     var c = $('#box').attr('class');
          //   console.log(c);
-            
+            $('#sform').submit(function(){
+               var name = $('#sname').val();
+               var className = $('#sclass').val();
+               var Country = $('#scountry').val();
+               alert("Hello "+name+"class : "+className+"Country :"+Country);
+            });
         });
     </script>
 </body>
