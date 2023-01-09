@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Append & Prepend Methods</title>
+    <style>
+		body{ font-family: arial; }
+		h1{ font-size: 25px; }
+		#box{
+			background: rgb(4, 231, 23);
+			padding: 10px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+    <div id="box">
+		<h2>Test Box</h2>
+		<p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
+	</div>
+    <br>
+	<button id="appendBtn">Append</button>
+	<button id="prependBtn">Prepend</button>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#appendBtn').click(function(){
+              $('#box').append('<h3 style="color:red;"> Learn append method</h3>');
+            });
+
+            $('#prependBtn').click(function(){
+              $('#box').prepend('<h3 style="color:blue;"> Learn prepend method</h3>');
+            });
+        });
+    </script>
+</body>
+</html>
