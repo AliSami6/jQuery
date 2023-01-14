@@ -22,12 +22,23 @@
 	</div>
 	<br>
 	<button id="replaceBtn">Replace</button>
+    <button id="rWBtn">Replace header</button>
+      <button id="replaceAllBtn">Replace header</button>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
 		/* jQuery  ReplaceWith() & ReplaceAll*/
 		$(document).ready(function(){
             $("#replaceBtn").click(function(){
                $('#box p:nth-child(3)').replaceWith('<h4>replace</h4>');
+                
+            });
+               $("#rWBtn").click(function(){
+               $('#box h2').replaceWith('<h1>Heading Tag </h1>');
+                
+            });
+                $("#replaceAllBtn").click(function(){
+               $('<h2> Replace Heading Tag </h2>').replaceAll('#box p:first');
+                
             });
             
 		});
