@@ -26,10 +26,15 @@
 	<script>
 		/* jQuery hide & show Method*/
 		$(document).ready(function(){
-		
-
-
-		
+		  $('#hideBtn').click(function(){
+            $('#box p').hide();
+          });
+           $('#showBtn').click(function(){
+            $('#box p').show();
+          });
+           $('#toggleBtn').click(function(){
+            $('#box p').toggle();
+          });
 		});
 	</script>
 </body>
