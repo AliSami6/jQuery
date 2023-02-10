@@ -27,13 +27,19 @@
 		/* jQuery hide & show Method*/
 		$(document).ready(function(){
 		  $('#hideBtn').click(function(){
-            $('#box p').hide('slow');
+            $('#box p').hide('2000',function(){
+                console.log('Now it is hidden');
+            });
           });
            $('#showBtn').click(function(){
-            $('#box p').show();
+            $('#box p').show('2000',function(){
+                  console.log('Now it is show');
+            });
           });
            $('#toggleBtn').click(function(){
-            $('#box p').toggle();
+            $('#box p').toggle('2000',function(){
+                  console.log('Hey toggle');
+            });
           });
 		});
 	</script>
