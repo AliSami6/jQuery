@@ -22,14 +22,15 @@
 	<h1>jQuery pageX & pageY Property</h1>
 	<div id="result"></div>
 	<div id="box"></div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="jquery-3.6.3.min.js"></script>
 	<script>
 		/* jQuery pageX & pageY Method*/
 		$(document).ready(function(){
 			$(document).mousemove(function(event){
-				//$('#result').text(event.pageX)
-				
-			
+				$('#result').text("X: "+event.pageX+ "Y :"+event.pageY);
+				var x = event.pageX;
+				var y = event.pageY;
+				$('#box').offset({top:y,left:x});
 			});
 		});
 	</script>
