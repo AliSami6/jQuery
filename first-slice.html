@@ -32,15 +32,22 @@
 	<div id="second">
 		<p class="test">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, eaque eius! Exercitationem dolorum commodi ea! Debitis, quo illum eos ratione aliquam eveniet, praesentium architecto excepturi, molestias, est optio. Vitae, similique.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Repellendus earum reprehenderit obcaecati ea, sapiente, cupiditate quod magnam porro officiis magni.</p>
-	</div>
+	<p cllass="withoutFilter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus aperiam voluptates recusandae nulla voluptas nam? Fugit, saepe? Veritatis animi dolor est numquam reprehenderit explicabo earum eveniet nemo laudantium, optio quibusdam?</p>
+    </div>
 	<script src="jquery-3.6.3.min.js"></script>
 	<script>
 		/* jQuery Filtering Method*/
 		$(document).ready(function(){
-          $('#second p').first().css('background','red');
-          $('ul li').last().css('background','green');
-          $('ul li').eq(2).css('background','gold');
-          $('ul li').eq(1).css('background','red');
+         $('#second p').first().css('background','red');
+         $('ul li').last().css('background','gold');
+         $('ul li').eq(2).css('font-weight','bold');
+          $('ul li').eq(1).css('color','red');
+          $('#second p').not('.test').css('background','red');
+          $('ul li').slice(0).css('list-style','none');
+          $('p').filter('.test').css('background','green');
+          $('ul li').css('display','block');
+          /* WithOutFilter*/
+			$('p.withoutFilter').css('background','gold');
 
 		});
 	</script>
